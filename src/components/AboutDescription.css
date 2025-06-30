@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 3rem;
+  width: 100%;
+  background: linear-gradient(135deg, #f2e9e4, #e3d5ca); /* soft beige blush */
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-radius: 2rem 2rem 0 0;
+  transition: all 0.4s ease;
+}
+
+.about-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+.about-text {
+  flex: 1;
+  padding: 1rem 2rem;
+  color: #3d2c23;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.about-text h2 {
+  font-size: 2.9rem;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(to right, #5d4037, #a1887f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.about-text p {
+  font-size: 1.15rem;
+  line-height: 2;
+  text-align: justify;
+  color: #5c4631;
+  opacity: 0.95;
+  font-weight: 500;
+}
+.about-text h2 {
+  text-shadow: 1px 1px 5px rgba(93, 64, 55, 0.3);
+}
+
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(to right, #a1887f, #d7ccc8);
+}
+
+/* Subtle entrance animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+
+  .about-text {
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+  }
+
+  .about-image {
+    max-width: 90%;
+  }
+}

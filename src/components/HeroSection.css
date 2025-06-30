@@ -1,0 +1,98 @@
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh; 
+    padding: 2rem;
+    /* background-image: url('/calmsphere/src/assets/Premium\ Vector\ _\ Modern\ Abstract\ background.jpeg');  */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    color: #FFFFFF;
+    background: linear-gradient(135deg,#5C4033,#7A4B3B, #B08968 );
+    position: relative;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: linear-gradient(45deg, #FFFFFF, #F5EDE6, #D9BFA9, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+ 
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #EB5B00 ;
+    margin-top: 1rem;
+  }
+  
+  
+   .hero-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+  }
+  
+  .hero-form h2 {
+    color: #EB5B00; 
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 0;
+  }
+  
+  .hero-form input,
+  .hero-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    width: 100%;
+    margin-bottom: 1.2rem; 
+  }
+  
+  .hero-form button {
+    padding: 10px;
+    font-size: 1.1rem;
+    border: none;
+    background-color: #EB5B00; 
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-form button:hover {
+    background-color: #7A4B3B; 
+  }
+  
+
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+    .hero-text {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    .hero-form {
+      max-width: 90%;
+      padding: 1.5rem;
+    }
+  }
+  

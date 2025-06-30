@@ -1,0 +1,71 @@
+.company-history {
+  padding: 4rem 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.company-history h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  /* background: linear-gradient(90deg, #c19982, #f2d8c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #5a3e36;
+  text-decoration: underline;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #c19982;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: #c19982;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.timeline-content {
+  padding-left: 1rem;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #5a3e36;
+}
+
+.timeline-content p {
+  font-size: 1.1rem;
+  color: #3b2f2f;
+  line-height: 1.7;
+  margin-top: 0.5rem;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content p {
+    font-size: 1rem;
+  }
+}

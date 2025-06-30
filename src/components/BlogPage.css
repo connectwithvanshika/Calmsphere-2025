@@ -1,0 +1,46 @@
+.blog-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.4); /* optional: adds contrast */
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #fcebd5;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #f8f8f8;
+  line-height: 1.6;
+}
+.blog-page h2{
+  padding: 40px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #5a3e36;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+ 
+}

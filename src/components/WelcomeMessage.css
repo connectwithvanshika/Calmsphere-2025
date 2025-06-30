@@ -1,0 +1,104 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(1deg, #E5D5B8, #D0B8A8, #F7F1E1);
+
+    
+  }
+  
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+  text-align: center;
+  background-image: url('/src/assets/anime.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  
+}
+
+ 
+
+  .welcome-text {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #F5F5F5, #D8BBAA, #EFE5DC);
+
+
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 150px;
+    animation: bounceIn 1.5s ease-out; 
+    text-shadow: 2px 2px 6px rgba(255, 200, 150, 0.3);
+
+  }
+  
+  
+  @keyframes bounceIn {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(30px);
+      opacity: 1;
+    }
+    80% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+  .welcome-subtext {
+    font-size: 28px;
+    color:white; 
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1.5s forwards; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+ 
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .welcome-text {
+      font-size: 2.5rem; 
+    }
+  
+    .welcome-subtext {
+      font-size: 1rem;  
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .welcome-text {
+      font-size: 2rem; 
+    }
+  
+    .welcome-subtext {
+      font-size: 0.9rem; 
+    }
+  
+    .welcome-container {
+      padding: 10px; 
+    }
+  }
+  
