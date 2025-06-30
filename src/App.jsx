@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import ScrollToTop from "./components/ScrollToTop";
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import WelcomeMessage from "./components/WelcomeMessage";
 import HeroSection from "./components/HeroSection";
 import FeatureCarousel from "./components/FeatureCarousel";
