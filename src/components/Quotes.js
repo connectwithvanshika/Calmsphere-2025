@@ -1,5 +1,4 @@
 const mentalHealthQuotes = [
-  // Real quotes by authors and thinkers
   "\"What mental health needs is more sunlight, more candor, and more unashamed conversation.\" – Glenn Close",
   "\"There is hope, even when your brain tells you there isn’t.\" – John Green",
   "\"You don’t have to control your thoughts. You just have to stop letting them control you.\" – Dan Millman",

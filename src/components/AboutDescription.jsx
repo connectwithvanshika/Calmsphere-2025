@@ -16,7 +16,7 @@ const AboutDescription = () => {
           <br /><br />
           Designed with empathy and backed by psychological insights, CalmSphere offers a thoughtful blend of mood tracking, mindful breathing sessions, daily motivation, and journaling — all wrapped in a soothing, minimalist interface that brings calm to your fingertips.
           <br /><br />
-          This isn’t just another wellness tool. It’s your personal sanctuary — a quiet corner of the internet where you are seen, heard, and supported. Whether it’s a tough day or a tender moment, CalmSphere is here to walk with you through it all — one breath, one feeling, one reflection at a time.
+          This isn't just another wellness tool. It's your personal sanctuary — a quiet corner of the internet where you are seen, heard, and supported. Whether it’s a tough day or a tender moment, CalmSphere is here to walk with you through it all — one breath, one feeling, one reflection at a time.
           <br /><br />
           Join us in cultivating a kinder, more mindful world — starting from within.
         </p>

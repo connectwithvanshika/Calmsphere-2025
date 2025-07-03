@@ -5,7 +5,6 @@ const Footer = ({ onNavigate }) => {
   return (
     <footer>
       <div className="footer-grid">
-        {/* Column 1 - Quick Links */}
         <div className="footer-column">
           <h4>Quick Links</h4>
           <ul>
@@ -52,14 +51,12 @@ const Footer = ({ onNavigate }) => {
           </ul>
         </div>
 
-        {/* Column 2 - Contact Info */}
         <div className="footer-column">
           <h4>Contact Us</h4>
           <p>Email: support@calmsphere.com</p>
           <p>Phone: +91 98765 43210</p>
         </div>
 
-        {/* Column 3 - Social Icons */}
         <div className="footer-column">
           <h4>Follow Us</h4>
           <div className="social-icons">

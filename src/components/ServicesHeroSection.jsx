@@ -1,6 +1,6 @@
-// components/ServicesHeroSection.jsx
+
 import React from 'react';
-import './ServicesHeroSection.css'; // We'll style here
+import './ServicesHeroSection.css'; 
 import aboutImage from '../assets/yoga2.jpg'
 
 const ServicesHeroSection = () => {

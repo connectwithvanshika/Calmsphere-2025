@@ -1,4 +1,4 @@
-// components/LoginPage.jsx
+
 import React from "react";
 import "./LoginPage.css";
 

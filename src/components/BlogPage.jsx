@@ -4,7 +4,7 @@ import BlogCard from "./BlogCard";
 import garden from "../assets/garden.jpg";
 import write from "../assets/write.jpeg";
 import nature from "../assets/nature_woods.jpg";
-import detox from "../assets/detox.jpeg"; // Use a calming 'off-screen' moment image
+import detox from "../assets/detox.jpeg"; 
 import selflove from "../assets/selflove.jpeg";
 import blogHero from '../assets/blog.jpg';
 

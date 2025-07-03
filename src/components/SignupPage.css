@@ -1,10 +1,10 @@
-/* SignupPage.css */
+
 .signup-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
- background: linear-gradient(135deg, #fefcf9, #dfcfc4, #2c1b16); /* updated soft gradient *//* Soft calm beige-pink-peach gradient */
+ background: linear-gradient(135deg, #fefcf9, #dfcfc4, #2c1b16); 
   font-family: 'Poppins', sans-serif;
   padding: 1rem;
 }

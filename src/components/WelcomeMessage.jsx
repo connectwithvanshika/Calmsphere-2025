@@ -1,7 +1,7 @@
 import React from 'react';
 import './WelcomeMessage.css';
-import backgroundImage from '../assets/anime.jpg'; // Adjust the path as necessary
-import RandomQuote from './RandomQuote'; // ✅ Import added
+import backgroundImage from '../assets/anime.jpg'; 
+import RandomQuote from './RandomQuote'; 
 
 export default function WelcomeMessage() {
   return (

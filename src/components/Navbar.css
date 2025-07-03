@@ -6,12 +6,11 @@
   padding: 1rem 2rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  
-  position: fixed; /* Keeps navbar at top */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Makes sure it stays above other elements */
+  z-index: 1000; 
 }
 
 .logo {
@@ -52,7 +51,7 @@
   font-weight: 600;
   cursor: pointer;
   border-radius: 4px;
-  /* margin-left: 50px; */
+
 
 
 }

@@ -12,7 +12,7 @@
 }
 
 .hero-content {
-  background-color: rgba(0, 0, 0, 0.4); /* optional: adds contrast */
+  background-color: rgba(0, 0, 0, 0.4); 
   padding: 2rem 3rem;
   border-radius: 10px;
   text-align: left;

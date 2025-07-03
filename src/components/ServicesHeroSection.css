@@ -21,17 +21,13 @@
 .hero-content {
   max-width: 500px;
   color: #fff5ee;
-  /* color: black; */
   font-family: 'Segoe UI', sans-serif;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  /* background: linear-gradient(to right, #7A4B3B, #D2BBA0);
-  -webkit-background-clip: text;
-  color: transparent; */
   color: black;
 }
 
@@ -39,5 +35,4 @@
   font-size: 1.5rem;
   font-weight: 400;
   color: #fffaf0;
-  /* color: black; */
 }

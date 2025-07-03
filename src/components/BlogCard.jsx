@@ -1,4 +1,4 @@
-// components/BlogCard.jsx
+
 import React from "react";
 import "./BlogCard.css";
 

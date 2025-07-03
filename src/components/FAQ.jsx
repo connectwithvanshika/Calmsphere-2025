@@ -1,4 +1,4 @@
-// components/FAQ.jsx
+
 import React, { useState } from 'react';
 import './FAQ.css';
 
@@ -17,7 +17,7 @@ const faqData = [
   },
   {
     question: "How do I reset my password?",
-    answer: "Go to the login page and click on 'Forgot Password'. You’ll receive a reset link on your registered email.",
+    answer: "Go to the login page and click on 'Forgot Password'. You'll receive a reset link on your registered email.",
   },
   {
     question: "Is my journal data secure?",

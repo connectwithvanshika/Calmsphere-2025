@@ -1,6 +1,6 @@
-// components/SignupPage.jsx
+
 import React from "react";
-import "./SignupPage.css"; // Assuming you have separate styling
+import "./SignupPage.css"; 
 
 const SignupPage = ({ onNavigate }) => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from './NavBar'; // ✅ make sure this matches the filename
+import Navbar from './NavBar';
 import AboutHeroSection from './AboutHeroSection';
-import CompanyHistory from './CompanyHistory'; // ✅ path must be correct
+import CompanyHistory from './CompanyHistory'; 
 
 const AboutPage = ({ onNavigate }) => {
   return (

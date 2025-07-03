@@ -14,7 +14,7 @@ body {
   justify-content: space-between;
   padding: 6rem 3rem;
   width: 100%;
-  background: linear-gradient(135deg, #f2e9e4, #e3d5ca); /* soft beige blush */
+  background: linear-gradient(135deg, #f2e9e4, #e3d5ca);
   flex-wrap: wrap;
   gap: 2rem;
   border-radius: 2rem 2rem 0 0;
@@ -38,6 +38,7 @@ body {
   transition: transform 0.3s ease;
 }
 
+/* Image design  */
 .about-image:hover {
   transform: scale(1.03);
 }
@@ -87,7 +88,7 @@ body {
   background: linear-gradient(to right, #a1887f, #d7ccc8);
 }
 
-/* Subtle entrance animations */
+
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -110,7 +111,7 @@ body {
   }
 }
 
-/* Responsive */
+/* Responsiveness */
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;

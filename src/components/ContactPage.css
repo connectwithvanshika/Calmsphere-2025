@@ -4,7 +4,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Left Form */
+
 .contact-form {
   flex: 1;
   padding: 3rem;
@@ -84,10 +84,10 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-/* Right Visual */
+
 .contact-visual {
   flex: 1;
-  background-image: url('../assets/lordbuddha.jpeg'); /* add image in assets */
+  background-image: url('../assets/lordbuddha.jpeg'); 
   background-size: cover;
   background-position: center;
   position: relative;
