@@ -66,7 +66,7 @@ const Navbar = ({ activePage, onNavigate }) => {
       </ul>
       <div className="auth-buttons">
         <button onClick={() => onNavigate("login")}>Login</button>
-        <button onClick={() => onNavigate("signup")}>Signup</button>
+        <button onClick={() => onNavigate("signup")}>Sign up</button>
       </div>
     </nav>
   );

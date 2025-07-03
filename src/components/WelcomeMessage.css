@@ -21,6 +21,10 @@ body, html {
 
   
 }
+.welcome-text{
+  font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+
+}
 
  
 
@@ -62,6 +66,7 @@ body, html {
     color:white; 
     opacity: 0;
     animation: fadeIn 2s ease-out 1.5s forwards; 
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
     margin: 0;
     padding: 0;
   }

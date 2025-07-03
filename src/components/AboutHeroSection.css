@@ -45,12 +45,14 @@
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .hero-content p {
   font-size: 2rem;
   line-height: 1.7;
   color: #f3f3f3;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Responsive */

@@ -1,3 +1,6 @@
+body{
+  font-family: 'Poppins', sans-serif;
+}
 .key-selling-points {
     display: flex;
     flex-direction: column;
@@ -21,16 +24,24 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #eb5b00; 
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+
+
   }
   
   .description {
     flex: 1;
     padding-right: 2rem;
+    
   }
   
   .description p {
     font-size: 18px;
     line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    
+
+
   }
   
   .image {

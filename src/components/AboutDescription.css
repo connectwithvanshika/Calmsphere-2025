@@ -6,6 +6,7 @@
 
 body {
   overflow-x: hidden;
+  
 }
 .about-section {
   display: flex;
@@ -47,6 +48,7 @@ body {
   color: #3d2c23;
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   animation: fadeInRight 1s ease forwards;
+
 }
 
 .about-text h2 {
@@ -56,6 +58,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
+  font-family: 'Poppins', sans-serif;
 }
 
 .about-text p {
@@ -65,9 +68,11 @@ body {
   color: #5c4631;
   opacity: 0.95;
   font-weight: 500;
+  font-family: 'Poppins', sans-serif;
 }
 .about-text h2 {
   text-shadow: 1px 1px 5px rgba(93, 64, 55, 0.3);
+  font-family: 'Poppins', sans-serif;
 }
 
 

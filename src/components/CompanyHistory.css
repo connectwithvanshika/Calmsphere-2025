@@ -16,6 +16,7 @@
   letter-spacing: 1px;
   color: #5a3e36;
   text-decoration: underline;
+  font-family: 'Poppins', sans-serif;
 }
 
 .timeline {
@@ -49,6 +50,7 @@
   margin: 0;
   font-size: 1.4rem;
   color: #5a3e36;
+  font-family: 'Poppins', sans-serif;
 }
 
 .timeline-content p {
@@ -57,6 +59,7 @@
   line-height: 1.7;
   margin-top: 0.5rem;
   text-align: justify;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Responsive */

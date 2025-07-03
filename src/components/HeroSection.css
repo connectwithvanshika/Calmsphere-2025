@@ -16,18 +16,25 @@
   
   .hero-text {
     max-width: 50%;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     color: #FFFFFF;
     background: linear-gradient(45deg, #FFFFFF, #F5EDE6, #D9BFA9, #FFFFFF, #FFFFFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .hero-text h1{
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+
+
+  }
  
   .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #EB5B00 ;
     margin-top: 1rem;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+
   }
   
   
@@ -48,6 +55,9 @@
     margin-bottom: 1rem;
     text-align: left;
     padding-left: 0;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+
+    
   }
   
   .hero-form input,
@@ -59,6 +69,8 @@
     background-color: #F0F0F0;
     width: 100%;
     margin-bottom: 1.2rem; 
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+
   }
   
   .hero-form button {
@@ -70,6 +82,8 @@
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+
   }
   
   .hero-form button:hover {

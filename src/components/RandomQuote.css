@@ -24,6 +24,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.quote-box p{
+  font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+
+}
+
 .quote-box:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
