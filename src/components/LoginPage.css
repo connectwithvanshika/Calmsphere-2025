@@ -88,3 +88,20 @@
 .switch-link a:hover {
   text-decoration: underline;
 }
+.google-login-btn {
+  background: linear-gradient(90deg, #a2675b, #5e3023);
+  color: white;
+  font-weight:600;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.google-login-btn:hover {
+  background-color: #f1f1f1;
+}
