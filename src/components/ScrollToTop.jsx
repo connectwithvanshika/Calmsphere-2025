@@ -6,7 +6,7 @@ const ScrollToTop = ({ page }) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [page]); // Triggers when page changes
 
-  return null; // No UI, just side-effect
+  return null; 
 };
 
 export default ScrollToTop;

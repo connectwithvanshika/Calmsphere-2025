@@ -1,7 +1,7 @@
 // src/components/RandomQuote.jsx
 import React from 'react';
 import quotes from './Quotes';
-import './RandomQuote.css'; // ✅ Import CSS here
+import './RandomQuote.css'; 
 
 const RandomQuote = () => {
   const randomIndex = Math.floor(Math.random() * quotes.length);
