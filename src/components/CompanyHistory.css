@@ -60,12 +60,59 @@
 }
 
 
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .company-history {
+    padding: 3rem 1.2rem;
+  }
+
+  .company-history h2 {
+    font-size: 2.5rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .company-history {
+    padding: 2.5rem 1rem;
+  }
+
+  .company-history h2 {
+    font-size: 2.2rem;
+  }
+
   .timeline-content h3 {
     font-size: 1.2rem;
   }
 
   .timeline-content p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-history {
+    padding: 2rem 1rem;
+  }
+
+  .company-history h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline {
+    margin-left: 10px;
+    padding-left: 15px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.95rem;
   }
 }

@@ -12,7 +12,7 @@ const features = [
     title: "Relaxing Yoga Tutorial.",
     description:
       "Guided yoga sessions designed to stretch, calm, and relieve stress. Perfect for any experience level, helping you find inner peace",
-    link: "https://www.youtube.com/watch?v=9MazN_6wdqI",
+    link: "yoga",
   },
   {
     image: music,

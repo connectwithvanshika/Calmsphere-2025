@@ -16,10 +16,28 @@ export default function HeroSection() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Form submitted');
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await fetch("https://formspree.io/f/xkgvlbpo", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      alert("Thank you! Your message has been sent");
+      setFormData({ name: "", email: "", message: "" }); // reset
+    } else {
+      alert("Oops! Something went wrong.");
+    }
+  } catch (error) {
+    alert("Error: " + error.message);
+  }
+};
+
 
   return (
     <section className="hero-section">

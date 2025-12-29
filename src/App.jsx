@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import WelcomeMessage from "./components/WelcomeMessage";
@@ -20,9 +19,26 @@ import BlogPage from "./components/BlogPage";
 import ContactPage from "./components/ContactPage";
 import LoginPage from "./components/LoginPage";
 import SignupPage from "./components/SignupPage";
+import EmotionTranslator from "./components/EmotionTranslator";
+import EmergencyCalmPage from "./components/EmergencyCalmPage";
+
+
+
+// Pages
+import YogaPage from "./pages/YogaPage";
+import MusicPage from "./pages/MusicPage";
+import JournalPage from "./pages/JournalPage";
+import PomodoroPage from "./pages/PomodoroPage";
+import NaturePage from "./pages/NaturePage";
+import MoodLogPage from "./pages/MoodLogPage";
+import FutureYouPage from "./pages/FutureYouPage";
+
+
 
 const App = () => {
   const [page, setPage] = useState("home");
+  const [showEmergencyMode, setShowEmergencyMode] = useState(true); // Set to true to show Emergency Calm Page
+
 
   const handleNavigate = (pageName) => {
     setPage(pageName);
@@ -38,10 +54,12 @@ const App = () => {
       {page === "home" && (
         <>
           <WelcomeMessage />
+          <EmotionTranslator />
           <HeroSection />
           <FeatureCarousel />
           <KeySellingPoints />
           <TestimonialCarousel />
+
         </>
       )}
 
@@ -68,7 +86,22 @@ const App = () => {
       {page === "login" && <LoginPage onNavigate={handleNavigate} />}
       {page === "signup" && <SignupPage onNavigate={handleNavigate} />}
 
-     {!isAuthPage && <Footer onNavigate={handleNavigate} />}
+      {!isAuthPage && page !== "moodlog" && page !== "futureyou" && <Footer onNavigate={handleNavigate} />}
+
+
+      {page === "yoga" && <YogaPage />}
+      {page === "music" && <MusicPage />}
+      {page === "journal" && <JournalPage />}
+      {page === "pomodoro" && <PomodoroPage />}
+      {page === "nature" && <NaturePage />}
+      {page === "moodlog" && <MoodLogPage />}
+      {page === "futureyou" && <FutureYouPage />}
+
+      {/* Emergency Calm Overlay - Shows on top of everything when triggered */}
+      {showEmergencyMode && (
+        <EmergencyCalmPage onExit={() => setShowEmergencyMode(false)} />
+      )}
+
     </>
   );
 };

@@ -1,0 +1,457 @@
+/* 🎨 Emotion Translator - CSS Variables & Styling */
+
+:root {
+    /* Base Theme - Deep Black + Coffee Brown */
+    --emotion-bg-deep: #0a0a0a;
+    --emotion-bg-black: #121212;
+    --emotion-surface-coffee: #2d2520;
+    --emotion-surface-light: #3d3530;
+    --emotion-text-warm: #f5ede6;
+    --emotion-text-soft: #d9cfc8;
+    --emotion-text-muted: #a89a8f;
+
+    /* Emotion-Based Accent Colors (Soft & Muted) */
+    --emotion-overwhelmed: linear-gradient(135deg, #c4915a 0%, #8b6f47 100%);
+    --emotion-anxious: linear-gradient(135deg, #6b9b9e 0%, #4a6b6d 100%);
+    --emotion-sad: linear-gradient(135deg, #6b7c9e 0%, #4a5570 100%);
+    --emotion-tired: linear-gradient(135deg, #8b7a6f 0%, #5d4e45 100%);
+    --emotion-lonely: linear-gradient(135deg, #7a6b8b 0%, #524761 100%);
+    --emotion-calm: linear-gradient(135deg, #6b8b5a 0%, #4a5e3f 100%);
+    --emotion-hopeful: linear-gradient(135deg, #c4a55a 0%, #8b7847 100%);
+    --emotion-numb: linear-gradient(135deg, #6b6b6b 0%, #4a4a4a 100%);
+
+    /* Shadows & Glows */
+    --emotion-shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --emotion-shadow-card: 0 12px 48px rgba(0, 0, 0, 0.6);
+    --emotion-glow-subtle: 0 0 20px rgba(196, 145, 90, 0.15);
+}
+
+/* 🌿 Container & Card */
+.emotion-translator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 3rem 1.5rem;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, rgba(18, 18, 18, 0.98) 100%);
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+    position: relative;
+}
+
+.emotion-translator-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--emotion-bg-deep);
+    opacity: 0.85;
+    z-index: 0;
+}
+
+.emotion-translator-card {
+    background: var(--emotion-surface-coffee);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    max-width: 680px;
+    width: 100%;
+    box-shadow: var(--emotion-shadow-card);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(196, 145, 90, 0.2);
+}
+
+.emotion-translator-card.expanded {
+    max-width: 720px;
+    padding: 3.5rem 3rem;
+}
+
+/* 🖋 Headline & Subtext */
+.emotion-headline {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--emotion-text-warm);
+    text-align: center;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+.emotion-subtext {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--emotion-text-muted);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+/* 🎭 Emotion Grid */
+.emotion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* 🎨 Emotion Buttons */
+.emotion-button {
+    background: var(--emotion-surface-light);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--emotion-text-soft);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.emotion-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 16px;
+    z-index: 0;
+}
+
+.emotion-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--emotion-glow-subtle);
+    border-color: rgba(196, 145, 90, 0.3);
+}
+
+.emotion-button:hover::before {
+    opacity: 0.1;
+}
+
+/* Individual Emotion Colors */
+.emotion-button.overwhelmed::before {
+    background: var(--emotion-overwhelmed);
+}
+
+.emotion-button.anxious::before {
+    background: var(--emotion-anxious);
+}
+
+.emotion-button.sad::before {
+    background: var(--emotion-sad);
+}
+
+.emotion-button.tired::before {
+    background: var(--emotion-tired);
+}
+
+.emotion-button.lonely::before {
+    background: var(--emotion-lonely);
+}
+
+.emotion-button.calm::before {
+    background: var(--emotion-calm);
+}
+
+.emotion-button.hopeful::before {
+    background: var(--emotion-hopeful);
+}
+
+.emotion-button.numb::before {
+    background: var(--emotion-numb);
+}
+
+.emotion-button.overwhelmed:hover {
+    border-color: rgba(196, 145, 90, 0.4);
+}
+
+.emotion-button.anxious:hover {
+    border-color: rgba(107, 155, 158, 0.4);
+}
+
+.emotion-button.sad:hover {
+    border-color: rgba(107, 124, 158, 0.4);
+}
+
+.emotion-button.tired:hover {
+    border-color: rgba(139, 122, 111, 0.4);
+}
+
+.emotion-button.lonely:hover {
+    border-color: rgba(122, 107, 139, 0.4);
+}
+
+.emotion-button.calm:hover {
+    border-color: rgba(107, 139, 90, 0.4);
+}
+
+.emotion-button.hopeful:hover {
+    border-color: rgba(196, 165, 90, 0.4);
+}
+
+.emotion-button.numb:hover {
+    border-color: rgba(107, 107, 107, 0.4);
+}
+
+/* ✨ Validation Text */
+.validation-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--emotion-text-warm);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    animation: fadeInUp 0.6s ease;
+}
+
+/* 🪴 Action Suggestions */
+.action-suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.action-card {
+    background: var(--emotion-surface-light);
+    border-radius: 14px;
+    padding: 1.5rem 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(196, 145, 90, 0.1);
+    animation: fadeInUp 0.6s ease;
+    animation-fill-mode: both;
+}
+
+.action-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.action-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.action-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.action-card:hover {
+    background: rgba(61, 53, 48, 0.8);
+    border-color: rgba(196, 145, 90, 0.3);
+    transform: translateX(4px);
+}
+
+.action-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--emotion-text-warm);
+    margin-bottom: 0.4rem;
+}
+
+.action-subtext {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--emotion-text-muted);
+    font-style: italic;
+}
+
+/* 🫶 Completion State */
+.completion-state {
+    text-align: center;
+    animation: fadeInUp 0.6s ease;
+}
+
+.completion-message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--emotion-text-warm);
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+}
+
+.completion-submessage {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--emotion-text-soft);
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+.completion-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.done-button,
+.another-step-button,
+.back-button {
+    background: var(--emotion-surface-light);
+    border: 1px solid rgba(196, 145, 90, 0.2);
+    border-radius: 12px;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--emotion-text-soft);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    max-width: 320px;
+}
+
+.done-button:hover,
+.another-step-button:hover,
+.back-button:hover {
+    background: rgba(61, 53, 48, 0.9);
+    border-color: rgba(196, 145, 90, 0.4);
+    transform: translateY(-2px);
+}
+
+.back-button {
+    margin-top: 1.5rem;
+    background: transparent;
+    border-color: rgba(196, 145, 90, 0.15);
+    color: var(--emotion-text-muted);
+}
+
+/* 🎬 Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .emotion-translator-container {
+        padding: 2rem 1rem;
+        min-height: 70vh;
+    }
+
+    .emotion-translator-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .emotion-translator-card.expanded {
+        padding: 2.8rem 2.2rem;
+    }
+
+    .emotion-headline {
+        font-size: 1.9rem;
+    }
+
+    .emotion-subtext {
+        font-size: 0.95rem;
+    }
+
+    .emotion-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .emotion-button {
+        padding: 0.9rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .validation-text {
+        font-size: 1.15rem;
+    }
+
+    .action-card {
+        padding: 1.3rem 1.5rem;
+    }
+
+    .action-text {
+        font-size: 1rem;
+    }
+
+    .action-subtext {
+        font-size: 0.85rem;
+    }
+
+    .completion-message {
+        font-size: 1.3rem;
+    }
+
+    .completion-submessage {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .emotion-translator-container {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .emotion-translator-card {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    .emotion-headline {
+        font-size: 1.6rem;
+    }
+
+    .emotion-subtext {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .emotion-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+    }
+
+    .emotion-button {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .validation-text {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+    }
+
+    .action-card {
+        padding: 1.2rem 1.3rem;
+    }
+
+    .action-text {
+        font-size: 0.95rem;
+    }
+
+    .action-subtext {
+        font-size: 0.8rem;
+    }
+
+    .completion-message {
+        font-size: 1.2rem;
+    }
+
+    .completion-submessage {
+        font-size: 0.95rem;
+    }
+
+    .done-button,
+    .another-step-button,
+    .back-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}

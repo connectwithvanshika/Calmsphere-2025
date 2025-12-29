@@ -52,6 +52,30 @@ const Navbar = ({ activePage, onNavigate }) => {
           <a>Blog</a>
         </li>
 
+        <li className={activePage === "moodlog" ? "active-link" : ""}>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate("moodlog");
+            }}
+          >
+            Mood Log
+          </a>
+        </li>
+
+        <li className={activePage === "futureyou" ? "active-link" : ""}>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate("futureyou");
+            }}
+          >
+            Future You
+          </a>
+        </li>
+
         <li className={activePage === "contact" ? "active-link" : ""}>
           <a
             href="#"

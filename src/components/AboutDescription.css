@@ -6,8 +6,9 @@
 
 body {
   overflow-x: hidden;
-  
+
 }
+
 .about-section {
   display: flex;
   align-items: center;
@@ -71,6 +72,7 @@ body {
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
 }
+
 .about-text h2 {
   text-shadow: 1px 1px 5px rgba(93, 64, 55, 0.3);
   font-family: 'Poppins', sans-serif;
@@ -94,6 +96,7 @@ body {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -105,6 +108,7 @@ body {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -112,6 +116,20 @@ body {
 }
 
 /* Responsiveness */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 4rem 2rem;
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
@@ -133,5 +151,24 @@ body {
 
   .about-image {
     max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .about-image {
+    max-width: 100%;
   }
 }

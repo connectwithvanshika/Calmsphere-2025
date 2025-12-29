@@ -76,7 +76,22 @@ footer .copyright {
   text-align: center;
 }
 
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .footer-grid {
+    gap: 1.5rem;
+  }
+
+  .footer-column {
+    min-width: 200px;
+  }
+}
+
 @media (max-width: 768px) {
+  footer {
+    padding: 2rem 1.5rem 1rem;
+  }
+
   .footer-grid {
     flex-direction: column;
     align-items: center;
@@ -85,5 +100,29 @@ footer .copyright {
 
   .footer-column {
     margin-bottom: 2rem;
+    min-width: auto;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .footer-column h4 {
+    font-size: 1.1rem;
+  }
+
+  .footer-column p,
+  .footer-column ul li {
+    font-size: 0.9rem;
+  }
+
+  .social-icons i {
+    font-size: 1.2rem;
   }
 }

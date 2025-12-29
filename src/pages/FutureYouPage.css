@@ -1,0 +1,530 @@
+/* 🌈💌 Future You Letters - Colorful & Creative Design */
+
+:root {
+    /* Vibrant Color Palette */
+    --future-amber: #f4a261;
+    --future-pink: #e76f9f;
+    --future-purple: #9b7ec4;
+    --future-teal: #5ec4b6;
+    --future-peach: #ff9a76;
+    --future-gold: #f4c261;
+
+    /* Base Colors */
+    --future-bg-deep: #0f0f1a;
+    --future-bg-charcoal: #1a1a2e;
+    --future-text-warm: #f5ede6;
+    --future-text-soft: #d9cfc8;
+}
+
+/* 🌈 Page Container with Gradient Background */
+.future-you-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at top left, rgba(244, 162, 97, 0.15), transparent 50%),
+        radial-gradient(ellipse at top right, rgba(231, 111, 159, 0.12), transparent 50%),
+        radial-gradient(ellipse at bottom left, rgba(155, 126, 196, 0.1), transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(94, 196, 182, 0.12), transparent 50%),
+        linear-gradient(180deg, var(--future-bg-deep) 0%, var(--future-bg-charcoal) 100%);
+    padding: 6rem 2rem 4rem;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ✨ Floating Abstract Shapes */
+.floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--future-amber), transparent);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, var(--future-pink), transparent);
+    top: 50%;
+    right: 15%;
+    animation-delay: 5s;
+}
+
+.shape-3 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--future-purple), transparent);
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 10s;
+}
+
+.shape-4 {
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, var(--future-teal), transparent);
+    top: 30%;
+    right: 30%;
+    animation-delay: 15s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+
+    50% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    75% {
+        transform: translate(20px, 30px) scale(1.05);
+    }
+}
+
+.future-you-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* 🖋 Page Header */
+.future-you-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.8s ease;
+}
+
+.future-you-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--future-amber), var(--future-pink), var(--future-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.future-you-subtitle {
+    font-size: 1.3rem;
+    color: var(--future-text-soft);
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* 🎨 Prompt Chips */
+.prompt-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.prompt-chip {
+    background: linear-gradient(135deg, rgba(244, 162, 97, 0.15), rgba(231, 111, 159, 0.15));
+    border: 1px solid rgba(244, 162, 97, 0.3);
+    border-radius: 30px;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    backdrop-filter: blur(10px);
+}
+
+.prompt-chip:hover {
+    transform: translateY(-3px);
+    border-color: rgba(244, 162, 97, 0.6);
+    box-shadow: 0 8px 20px rgba(244, 162, 97, 0.2);
+}
+
+.prompt-emoji {
+    font-size: 1.2rem;
+}
+
+.prompt-text {
+    font-size: 0.9rem;
+    color: var(--future-text-soft);
+    font-weight: 500;
+}
+
+/* ✍️ Letter Card */
+.letter-writing-section {
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.letter-card {
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 24px;
+    padding: 2.5rem;
+    border: 2px solid transparent;
+    background-image:
+        linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)),
+        linear-gradient(135deg, var(--future-amber), var(--future-pink), var(--future-purple), var(--future-teal));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.letter-textarea {
+    width: 100%;
+    background: rgba(15, 15, 26, 0.6);
+    border: 1px solid rgba(244, 162, 97, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--future-text-warm);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+.letter-textarea::placeholder {
+    color: rgba(217, 207, 200, 0.5);
+    font-style: italic;
+}
+
+.letter-textarea:focus {
+    outline: none;
+    border-color: rgba(244, 162, 97, 0.5);
+    box-shadow: 0 0 20px rgba(244, 162, 97, 0.15);
+}
+
+/* 🔒 Privacy Note */
+.privacy-note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    color: var(--future-text-soft);
+    opacity: 0.8;
+}
+
+/* 💾 Save Buttons */
+.save-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.save-button {
+    flex: 1;
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.save-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.save-button:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+.save-button.primary {
+    background: linear-gradient(135deg, var(--future-amber), var(--future-pink));
+    color: white;
+}
+
+.save-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(244, 162, 97, 0.4);
+}
+
+.save-button.secondary {
+    background: rgba(155, 126, 196, 0.2);
+    border: 1px solid rgba(155, 126, 196, 0.4);
+    color: var(--future-text-soft);
+}
+
+.save-button.secondary:hover {
+    background: rgba(155, 126, 196, 0.3);
+    border-color: rgba(155, 126, 196, 0.6);
+}
+
+.save-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* 💌 Saved Letters Section */
+.saved-letters-section {
+    margin-top: 4rem;
+    animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.saved-letters-title {
+    font-size: 1.8rem;
+    color: var(--future-text-warm);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.saved-letters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.saved-letter-card {
+    background: rgba(26, 26, 46, 0.6);
+    border: 1px solid rgba(244, 162, 97, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.saved-letter-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(244, 162, 97, 0.5);
+    box-shadow: 0 10px 30px rgba(244, 162, 97, 0.2);
+}
+
+.letter-preview {
+    color: var(--future-text-soft);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.letter-date {
+    font-size: 0.85rem;
+    color: rgba(217, 207, 200, 0.6);
+    font-style: italic;
+}
+
+/* 💌 Letter Reveal Modal */
+.letter-reveal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
+    backdrop-filter: blur(10px);
+}
+
+.letter-reveal-card {
+    background: rgba(26, 26, 46, 0.95);
+    border-radius: 24px;
+    padding: 3rem;
+    max-width: 600px;
+    width: 90%;
+    border: 2px solid transparent;
+    background-image:
+        linear-gradient(rgba(26, 26, 46, 0.95), rgba(26, 26, 46, 0.95)),
+        linear-gradient(135deg, var(--future-gold), var(--future-peach), var(--future-pink));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    animation: floatIn 0.6s ease;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.reveal-header {
+    font-size: 1.5rem;
+    color: var(--future-text-warm);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.reveal-content {
+    font-size: 1.15rem;
+    color: var(--future-text-soft);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    white-space: pre-wrap;
+}
+
+.reveal-footer {
+    font-size: 1rem;
+    color: rgba(217, 207, 200, 0.7);
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.reveal-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.reveal-button {
+    flex: 1;
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.reveal-button.sit {
+    background: linear-gradient(135deg, var(--future-purple), var(--future-teal));
+    color: white;
+}
+
+.reveal-button.close {
+    background: rgba(155, 126, 196, 0.2);
+    border: 1px solid rgba(155, 126, 196, 0.4);
+    color: var(--future-text-soft);
+}
+
+.reveal-button:hover {
+    transform: translateY(-2px);
+}
+
+/* 🎬 Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .future-you-page {
+        padding: 5rem 1.5rem 3rem;
+    }
+
+    .future-you-title {
+        font-size: 2.5rem;
+    }
+
+    .future-you-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .prompt-chips {
+        gap: 0.8rem;
+    }
+
+    .prompt-chip {
+        padding: 0.7rem 1.2rem;
+    }
+
+    .letter-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .save-buttons {
+        flex-direction: column;
+    }
+
+    .saved-letters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letter-reveal-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .reveal-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .future-you-title {
+        font-size: 2rem;
+    }
+
+    .prompt-chip {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .letter-textarea {
+        font-size: 1rem;
+        padding: 1.2rem;
+    }
+}

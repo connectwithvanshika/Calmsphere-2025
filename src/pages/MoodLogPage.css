@@ -1,0 +1,350 @@
+/* 🧠📊 Mood Log Page - Emotional Rhythm Tracker */
+
+:root {
+    /* Coffee Brown + Deep Black Theme */
+    --mood-bg-deep: #0a0a0a;
+    --mood-bg-charcoal: #1a1a1a;
+    --mood-surface-coffee: #2d2520;
+    --mood-surface-light: #3d3530;
+    --mood-text-warm: #f5ede6;
+    --mood-text-soft: #d9cfc8;
+    --mood-text-muted: #a89a8f;
+    --mood-accent-coffee: rgba(196, 145, 90, 0.3);
+
+    /* Emotion Colors (Soft & Muted) */
+    --mood-calm: #6b8b5a;
+    --mood-anxious: #6b9b9e;
+    --mood-sad: #6b7c9e;
+    --mood-hopeful: #c4a55a;
+    --mood-overwhelmed: #c4915a;
+    --mood-tired: #8b7a6f;
+    --mood-lonely: #7a6b8b;
+}
+
+/* 🌑 Page Container */
+.mood-log-page {
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80') center/cover no-repeat fixed;
+    padding: 6rem 2rem 4rem;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.mood-log-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%); */
+    pointer-events: none;
+}
+
+.mood-log-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* 🖋 Page Header */
+.mood-log-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.mood-log-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--mood-text-warm);
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.02em;
+}
+
+.mood-log-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--mood-text-muted);
+    font-style: italic;
+}
+
+/* 🎭 Mood Input Section */
+.mood-input-section {
+    background: rgba(45, 37, 32, 0.95);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(196, 145, 90, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.mood-input-label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--mood-text-warm);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.mood-emotion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mood-emotion-button {
+    background: var(--mood-surface-light);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--mood-text-soft);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.mood-emotion-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--emotion-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 16px;
+}
+
+.mood-emotion-button:hover::before {
+    opacity: 0.1;
+}
+
+.mood-emotion-button:hover {
+    transform: translateY(-2px);
+    border-color: var(--emotion-color);
+}
+
+.mood-emotion-button.selected {
+    border-color: var(--emotion-color);
+    background: var(--mood-surface-light);
+}
+
+.mood-emotion-button.selected::before {
+    opacity: 0.15;
+}
+
+.mood-optional-note {
+    width: 100%;
+    background: var(--mood-surface-light);
+    border: 1px solid rgba(196, 145, 90, 0.15);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: var(--mood-text-soft);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.mood-optional-note::placeholder {
+    color: var(--mood-text-muted);
+    font-style: italic;
+}
+
+.mood-optional-note:focus {
+    outline: none;
+    border-color: rgba(196, 145, 90, 0.4);
+}
+
+.mood-log-button {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(196, 145, 90, 0.2), rgba(139, 111, 71, 0.2));
+    border: 1px solid rgba(196, 145, 90, 0.3);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--mood-text-warm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mood-log-button:hover:not(:disabled) {
+    background: linear-gradient(135deg, rgba(196, 145, 90, 0.3), rgba(139, 111, 71, 0.3));
+    border-color: rgba(196, 145, 90, 0.5);
+    transform: translateY(-2px);
+}
+
+.mood-log-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* 📈 Mood Chart Section */
+.mood-chart-section {
+    background: rgba(45, 37, 32, 0.95);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(196, 145, 90, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.mood-chart-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--mood-text-warm);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.mood-chart-container {
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.mood-chart {
+    width: 100%;
+    height: auto;
+    min-width: 600px;
+}
+
+.chart-label {
+    font-size: 12px;
+    fill: var(--mood-text-muted);
+    font-family: 'Poppins', sans-serif;
+}
+
+.chart-day-label {
+    font-size: 13px;
+    fill: var(--mood-text-soft);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.mood-chart-line {
+    filter: drop-shadow(0 0 8px rgba(196, 145, 90, 0.3));
+}
+
+.mood-chart-point {
+    filter: drop-shadow(0 0 6px rgba(196, 145, 90, 0.4));
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.mood-chart-point:hover {
+    r: 8;
+    filter: drop-shadow(0 0 10px rgba(196, 145, 90, 0.6));
+}
+
+/* 🪶 Gentle Insight */
+.mood-insight {
+    background: rgba(196, 145, 90, 0.08);
+    border-left: 3px solid rgba(196, 145, 90, 0.4);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+}
+
+.mood-insight p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--mood-text-soft);
+    font-style: italic;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .mood-log-page {
+        padding: 5rem 1.5rem 3rem;
+    }
+
+    .mood-log-title {
+        font-size: 2.2rem;
+    }
+
+    .mood-log-subtitle {
+        font-size: 1rem;
+    }
+
+    .mood-input-section,
+    .mood-chart-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .mood-emotion-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .mood-emotion-button {
+        padding: 0.9rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .mood-chart-title {
+        font-size: 1.3rem;
+    }
+
+    .mood-insight p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mood-log-page {
+        padding: 4.5rem 1rem 2rem;
+    }
+
+    .mood-log-title {
+        font-size: 1.9rem;
+    }
+
+    .mood-log-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .mood-input-section,
+    .mood-chart-section {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .mood-input-label {
+        font-size: 1.15rem;
+    }
+
+    .mood-emotion-button {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .mood-optional-note {
+        padding: 0.9rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .mood-log-button {
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .mood-insight {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .mood-insight p {
+        font-size: 0.95rem;
+    }
+}

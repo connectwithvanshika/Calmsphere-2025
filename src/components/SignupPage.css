@@ -1,10 +1,9 @@
-
 .signup-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
- background: linear-gradient(135deg, #fefcf9, #dfcfc4, #2c1b16); 
+  background: linear-gradient(135deg, #fefcf9, #dfcfc4, #2c1b16);
   font-family: 'Poppins', sans-serif;
   padding: 1rem;
 }
@@ -82,4 +81,55 @@
 
 .switch-link a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .signup-box {
+    max-width: 420px;
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 1.5rem;
+  }
+
+  .signup-box {
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .signup-box h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 1rem;
+  }
+
+  .signup-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .signup-box h2 {
+    font-size: 1.6rem;
+  }
+
+  .signup-box p {
+    font-size: 0.9rem;
+  }
+
+  .signup-form input {
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .signup-form button {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
 }
