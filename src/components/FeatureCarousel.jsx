@@ -19,20 +19,20 @@ const features = [
     title: "Soothing Music.",
     description:
       "A collection of calming music and nature sounds to create a peaceful atmosphere, perfect for relaxation or focus",
-    link: "https://www.youtube.com/watch?v=1ZYbU82GVz4&list=RDQM3-NUC-FFdJk&start_radio=1",
+    link: "music",
   },
   {
     image: Journal,
     title: "Mood Journal.",
     description:
       "Track your emotions daily to gain insights into your mental health and cultivate mindfulness for a balanced life.",
-    link: "https://penzu.com/",
+    link: "journal",
   },
   {
     image: pomodoro,
     title: "Focus Timer.",
     description:
-      "Boost your concentration and work peacefully using our calming Pomodoro timer.",
+      "Boost your concentration and work peacefully using calming Pomodoro timer.",
     link: "https://pomofocus.io/",
   },
   {
@@ -44,7 +44,7 @@ const features = [
   },
 ];
 
-const FeatureCarousel = () => {
+const FeatureCarousel = ({ onNavigate }) => {
   return (
     <div className="carousel-section">
       <h2 className="carousel-title">Featured Wellness Picks</h2>
@@ -54,14 +54,32 @@ const FeatureCarousel = () => {
             <img src={item.image} alt={item.title} />
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            <a
-              href={item.link}
-              className="cta-btn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn More
-            </a>
+            {item.link === "yoga" || item.link === "music" || item.link === "journal" ? (
+              <button
+                className="cta-btn"
+                onClick={() => {
+                  console.log("Clicked:", item.link);
+                  onNavigate(item.link);
+                }}
+                style={{
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: "1rem",
+                  fontFamily: "inherit",
+                }}
+              >
+                Learn More
+              </button>
+            ) : (
+              <a
+                href={item.link}
+                className="cta-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn More
+              </a>
+            )}
           </div>
         ))}
       </div>

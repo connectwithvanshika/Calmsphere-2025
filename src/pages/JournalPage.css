@@ -1,0 +1,203 @@
+/* Journal Page Container */
+.journal-page {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Outfit', sans-serif;
+    color: #333;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.journal-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.journal-header h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #915c0e 0%, #dbc3a5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 4rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Sections General */
+/* Sections General */
+.journal-page section {
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.journal-page section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.journal-page section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Mood Selection */
+.mood-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.mood-btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #555;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-family: inherit;
+}
+
+.mood-btn:hover {
+    border-color: #f6bf7b;
+    color: #11998e;
+    transform: translateY(-2px);
+}
+
+.mood-btn.selected {
+    background:  linear-gradient(135deg, #915c0e 0%, #dbc3a5 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px #c37f2d;
+}
+
+/* Entry Section */
+.entry-section .journal-textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: 1.1rem;
+    resize: vertical;
+    margin-top: 1.5rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.3s ease;
+}
+
+.entry-section .journal-textarea:focus {
+    outline: none;
+    border-color: #f6bf7b;
+    box-shadow: 0 0 0 3px rgba(56, 239, 125, 0.1);
+}
+
+.note-text {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Prompts Section */
+.prompts-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    background: #f9fdfa;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #e8f5e9;
+}
+
+.prompts-list li {
+    margin-bottom: 0.8rem;
+    color: #444;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.prompts-list li::before {
+    content: "•";
+    color: b57322;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+    /* Override generic section margin */
+}
+
+.safe-space-section {
+    background: #fcfcfc;
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid #a35a00
+}
+
+.begin-entry-section {
+    background:  linear-gradient(135deg, #915c0e 0%, #dbc3a5 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    /* margin-bottom: 0; */
+    box-shadow: 0 10px 30px #f6bf7b;
+    margin-top:20px;
+    
+}
+
+.begin-entry-section h2,
+.begin-entry-section p {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .journal-header h1 {
+        font-size: 2.2rem;
+        padding-top: 2rem;
+    }
+}

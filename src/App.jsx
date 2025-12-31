@@ -41,6 +41,7 @@ const App = () => {
 
 
   const handleNavigate = (pageName) => {
+    console.log("Navigating to:", pageName);
     setPage(pageName);
   };
 
@@ -56,7 +57,7 @@ const App = () => {
           <WelcomeMessage />
           <EmotionTranslator />
           <HeroSection />
-          <FeatureCarousel />
+          <FeatureCarousel onNavigate={handleNavigate} />
           <KeySellingPoints />
           <TestimonialCarousel />
 
@@ -86,9 +87,6 @@ const App = () => {
       {page === "login" && <LoginPage onNavigate={handleNavigate} />}
       {page === "signup" && <SignupPage onNavigate={handleNavigate} />}
 
-      {!isAuthPage && page !== "moodlog" && page !== "futureyou" && <Footer onNavigate={handleNavigate} />}
-
-
       {page === "yoga" && <YogaPage />}
       {page === "music" && <MusicPage />}
       {page === "journal" && <JournalPage />}
@@ -96,6 +94,8 @@ const App = () => {
       {page === "nature" && <NaturePage />}
       {page === "moodlog" && <MoodLogPage />}
       {page === "futureyou" && <FutureYouPage />}
+
+      {!isAuthPage && page !== "moodlog" && page !== "futureyou" && <Footer onNavigate={handleNavigate} />}
 
       {/* Emergency Calm Overlay - Shows on top of everything when triggered */}
       {showEmergencyMode && (

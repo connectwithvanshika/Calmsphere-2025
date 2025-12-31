@@ -1,0 +1,233 @@
+/* Music Page Container */
+.music-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Outfit', sans-serif;
+    color: #333;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.music-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.music-header h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #6f4e37 0%, #3e2723 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 4rem;
+}
+
+/* .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+} */
+
+/* Sections */
+.intro-section,
+.listen-guide-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.listen-guide-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Music Grid */
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.music-category-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.music-category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.images-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.feature-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .feature-img {
+    transform: scale(1.05);
+}
+
+.frequency-badge {
+    background: #f0f4ff;
+    color: #667eea;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    border: 1px solid #dbeafe;
+}
+
+.category-desc {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.best-for {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.best-for strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.best-for ul {
+    padding-left: 20px;
+    color: #555;
+}
+
+.best-for li {
+    margin-bottom: 0.3rem;
+}
+
+.suggested-sounds {
+    font-size: 0.95rem;
+    background: #fff5f5;
+    color: #c0392b;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+}
+
+/* How to Use & Reminder */
+.how-to-use-section,
+.reminder-section,
+.create-calm-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.how-to-use-section h2,
+.reminder-section h2,
+.create-calm-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.how-to-use-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.how-to-use-section li {
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.reminder-section {
+    border-left: 5px solid #667eea;
+}
+
+.create-calm-section {
+    background: linear-gradient(135deg, #915c0e 0%, #dbc3a5 100%);
+    color: white;
+    margin-bottom: 3rem;
+
+}
+
+.create-calm-section h2 {
+    color: white;
+}
+
+.create-calm-section p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .music-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .music-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .images-row {
+        flex-wrap: wrap;
+    }
+}
