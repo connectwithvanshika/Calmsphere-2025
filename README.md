@@ -1,10 +1,4 @@
-Perfect, I understand what you want 👍
-You need a **proper README for *CalmSphere – Mental Wellness Platform***, written in **the same structured, professional format** as your **SoloSphere README**, but **shorter, crisp, and internship-ready**.
 
-Below is a **clean, copy-paste READY README** 👇
-(No emojis overload, professional tone, resume + GitHub friendly)
-
----
 
 # 🌿 CalmSphere – Mental Wellness Platform
 
